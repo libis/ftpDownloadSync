@@ -1,0 +1,17 @@
+version: '3'
+services:
+  ftp_download_sync:
+    container_name: ftp_download_sync
+    image: ruby_image
+    build: 
+      context: ./
+      dockerfile: Dockerfile
+    networks: 
+      - data_network
+    volumes:
+      - ./:/app/
+      - ./data/in/:/app/data/in/
+      - ./data/out/:/app/data/out/
+networks:
+  data_network:
+    driver: bridge
