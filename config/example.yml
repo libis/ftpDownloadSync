@@ -1,0 +1,11 @@
+---
+:last_run_updates: '2020-01-01T01:00:00+01:00'
+:ftp_server:
+  :type: ftp
+  :host: ftp.example.com
+  :user: my_user
+  :passwd: my_password
+  :path: "/path/to/my/files/"
+:file_pattern_to_download: !ruby/regexp /.*.tar.gz$/
+:download_dir: "/dir/to/download/"
+:extract_dir: "/extract/json/from/tar/"
