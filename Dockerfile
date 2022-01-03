@@ -15,3 +15,6 @@ WORKDIR $APP_HOME
 COPY Gemfile ./
 RUN gem install bundler
 RUN bundle install
+
+COPY *.rb /app/
+COPY lib /app/lib/

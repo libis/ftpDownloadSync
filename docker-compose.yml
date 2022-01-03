@@ -9,9 +9,10 @@ services:
     networks: 
       - data_network
     volumes:
-      - ./:/app/
+      - ./config/:/app/config/
       - ./data/in/:/app/data/in/
       - ./data/out/:/app/data/out/
+
 networks:
   data_network:
     driver: bridge
