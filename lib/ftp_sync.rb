@@ -57,7 +57,8 @@ class FtpSync
           #puts "local File.size(paths[0]) #{ File.size(paths[0]) }" unless ! File.exist?(paths[0]) 
 
           if  options[:since].is_a?(Time)
-            tocopy << paths unless entry.mtime < options[:since] and File.exist?(paths[0]) and entry.filesize == File.size(paths[0])
+            #puts "entry.mtime < options[:since] #{entry.mtime < options[:since]}"
+            tocopy << paths unless entry.mtime < options[:since] # and File.exist?(paths[0]) and entry.filesize == File.size(paths[0])
           else
             tocopy << paths unless File.exist?(paths[0]) and entry.mtime < File.mtime(paths[0]) and entry.filesize == File.size(paths[0])
           end
