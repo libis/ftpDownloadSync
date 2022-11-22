@@ -26,7 +26,7 @@ puts "last_run_updates : #{last_run_updates}"
 
 
 # puts "Geting files : #{ config[:ftp_dir] }*.tar.gz"
-Dir.glob("#{ config[:ftp_dir] }*.tar.gz").each do |file| 
+Dir.glob("#{ config[:ftp_dir] }#{config[:file_pattern_to_download]}").each do |file| 
     if ( last_run_updates < File.mtime(file) ) 
         puts "move #{file}"
         FileUtils.cp(file, config[:download_dir])
