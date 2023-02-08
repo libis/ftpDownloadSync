@@ -10,6 +10,9 @@ OR
 
 $ docker-compose run --rm ftp_download_sync ruby downloadData.rb  
 
+
+$ docker-compose run --rm ftp_download_sync ruby moveData.rb 
+
 # build
 
 ## build image based on .env  
@@ -17,3 +20,5 @@ $ build.sh
 
 ## push to registry   
 $ build.sh push 
+
+

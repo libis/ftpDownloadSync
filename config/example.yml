@@ -6,6 +6,6 @@
   :user: my_user
   :passwd: my_password
   :path: "/path/to/my/files/"
-:file_pattern_to_download: !ruby/regexp /.*.tar.gz$/
+:file_pattern_to_download: !ruby/regexp /lirias_.*.tar.gz$/
 :download_dir: "/dir/to/download/"
 :extract_dir: "/extract/json/from/tar/"

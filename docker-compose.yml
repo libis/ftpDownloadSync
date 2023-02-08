@@ -12,7 +12,8 @@ services:
       - ./config/:/app/config/
       - ./data/in/:/app/data/in/
       - ./data/out/:/app/data/out/
-      - /libis/ftp/LIMO/lirias2/primo_ve/:/ftp_dir/
+      #- /libis/ftp/LIMO/lirias2/primo_ve/:/ftp_dir/
+      - ../../../dCollector/lirias_collector_git/records/primo_ve/:/ftp_dir/
 
 networks:
   data_network:

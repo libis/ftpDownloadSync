@@ -20,10 +20,8 @@ last_run_updates = Time.parse config[:last_run_updates]
 # puts config[:ftp_dir]
 # puts config[:user]
 
-puts "Move records from 'sftp' to elastic_data_in"
+puts "Move records '#{config[:ftp_dir] }#{config[:file_pattern_to_download]} to elastic_data_in"
 puts "last_run_updates : #{last_run_updates}"
-
-
 
 # puts "Geting files : #{ config[:ftp_dir] }*.tar.gz"
 Dir.glob("#{ config[:ftp_dir] }#{config[:file_pattern_to_download]}").each do |file| 
